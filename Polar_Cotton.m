@@ -2,7 +2,7 @@ clear all; close all; clc
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%         OPTICAL PARAMETERS        %%%%%%%%%%%%%%%%%%%%%%
-%addpath('C:\Users\...\functions'); % FOLDER WITH USED FUNCTIONS
+addpath('C:\Users\...\functions'); % FOLDER WITH USED FUNCTIONS
 
     %columns                % rows
     M=3096;                 N=2080;         % camera pixels

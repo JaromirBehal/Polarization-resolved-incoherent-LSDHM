@@ -29,11 +29,11 @@ clear all; close all; clc
 
 directory_images='C:\Users\jaray\Desktop\incoh_lat_shear_DH\POLARIZATION\mfiles_polar\final_2026_07_16\data'; % folder with camera records
 
-    % interference pattern with diamtoms
-    I=apodization_for_propag((fitsread([directory_images '\2025-08-14-1405_5-CapObj_0000.FIT'])));
+    % interference pattern with diatoms
+    I=apodization_for_propag((fitsread([directory_images '\diatoms.FIT'])));
 
     % interference pattern without sample
-    Iref=apodization_for_propag((fitsread([directory_images '\2025-08-14-1406_3-CapObj_0000.FIT'])));
+    Iref=apodization_for_propag((fitsread([directory_images '\diatoms_ref.FIT'])));
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%      CPLX amplitude reconstruction      %%%%%%%%%%%%%%%%%%%    
@@ -76,10 +76,10 @@ figure(10); imagesc(xobj,yobj,angle((U1./U1ref)./(U2./U2ref))); axis image; colo
 
 
     % direct image of diatoms (polarizer without analyzer); 12 ms exposure
-    Idia=(imread([directory_images '\2026-06-16-1057_1-CapObj_0000.png']));
+    Idia=(imread([directory_images '\diatoms_no_analyz.png']));
 
     % direct image of diatoms (crossed polarizer and analyzer); 1000 ms (!!!) exposure 
-    Idia_cros=(imread([directory_images '\2026-06-16-1056_0-CapObj_0000.png']));
+    Idia_cros=(imread([directory_images '\diatoms_with_analyz.png']));
 
 figure(11); imagesc(xobj,yobj,Idia); axis image; colormap gray; colorbar; clim([0 200])
 figure(12); imagesc(xobj,yobj,Idia_cros); axis image; colormap gray; colorbar; clim([0 200])

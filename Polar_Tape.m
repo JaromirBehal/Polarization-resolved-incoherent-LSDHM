@@ -30,10 +30,10 @@ clear all; close all; clc
 directory_images='C:\Users\jaray\Desktop\incoh_lat_shear_DH\POLARIZATION\mfiles_polar\final_2026_07_16\data'; % folder with camera records
 
     % interference pattern with tape
-    I=apodization_for_propag((fitsread([directory_images '\2025-08-18-1027_2-CapObj_0000.FIT'])));
+    I=apodization_for_propag((fitsread([directory_images '\tape.FIT'])));
 
     % interference pattern without sample
-    Iref=apodization_for_propag((fitsread([directory_images '\2025-08-18-1027_6-CapObj_0000.FIT'])));
+    Iref=apodization_for_propag((fitsread([directory_images '\tape_ref.FIT'])));
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%      CPLX amplitude reconstruction      %%%%%%%%%%%%%%%%%%%    
